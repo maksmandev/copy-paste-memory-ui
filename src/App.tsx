@@ -1,14 +1,14 @@
 import React from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import { Provider } from "react-redux"
+import store from "./core/store"
 
-function App() {
+import Templates from "./views/templates"
+
+const App = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-      </header>
-    </div>
+    <Provider store={store}>
+      <Templates />
+    </Provider>
   )
 }
 
